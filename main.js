@@ -1,5 +1,5 @@
 
-// My brain is not comprehending JS
+
 
 
 //==================Exercise #1 ==========//
@@ -12,11 +12,11 @@ let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
 let dog_names = ["Max","HAS","PuRple","dog"]
 
 function findWords(str, arr) {
-    for (let i = 0; i < str.length; i ++ )   
-     if (str.includes(arr[i]))
-     console.log("Matched");
-     else console.log("No Matches")
-     }
+    for (let i = 0; i < arr.length; i ++ ){   
+     if (str.includes(arr[i])){
+     console.log("Matched");}
+     else {console.log("No Matches")}
+     }}
  
  findWords(dog_string, dog_names)
 
@@ -28,8 +28,31 @@ and replaces it with the string "even index" */
 let givenArray = ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 
 function replaceEvens(arr) {
-    for (let i = 0; i < str.length; i ++ ) 
-    if (arr[i] % 2 == 0)
+    for (let i = 0; i < arr.length; i ++ ) {
+    if (i % 2 == 0){arr[i] = "even index"}}
+    console.log(arr)
 }
 
-// Ive sat here for way too long and just have no clue what to do
+replaceEvens(givenArray)
+
+// Code Wars problems below
+
+// Convert a string to a number
+
+const stringToNumber = function(str){
+  
+    return Number(str);
+  }
+
+
+// Find the amount of times a letter occurs within a string
+
+function strCount(str, letter){  
+    let counter = 0
+    for (let i = 0; i < str.length; i ++ ) {
+          if (str.charAt(i) === letter) {
+              counter++;
+          }
+      }
+      return counter;
+  }
